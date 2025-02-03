@@ -1,0 +1,52 @@
+<html>
+<head>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	<title>Edit profile</title>
+	<div align="left" style="border:1px solid black">
+	<img src="http://www.glosys.co.in/wp-content/uploads/2015/06/22685_1543347712592481_5835115883878899060_n.jpg" width="250" height="80" alt="logo">  &nbsp&nbsp &nbsp&nbsp &nbsp&nbsp &nbsp&nbsp &nbsp&nbsp &nbsp&nbsp<font size="+5"><b> Book Information System </b></font><br><br>
+	<style>
+		body{
+			 background-color:#A9A9A9;
+		}
+</style>
+	<style>
+		h1{
+			text-align: left;
+		}
+		#nav{
+			margin-right:150px;
+		}
+
+	</style>
+	<h1>
+		<div class="container">
+  <div class="row">
+    <div class="col-sm">
+    	<a id="nav" class="nav-link" href="/loginhome"> <input type="submit" class="btn btn-dark"  value="Home"> </a>
+	</div>
+	<div class="col-sm">
+		<a id="nav" class="nav-link" href="/mycart"> <input type="submit" class="btn btn-dark"  value="My Cart"> </a>
+	</div>
+	<div class="col-sm">
+		<a id="nav" class="nav-link" href="/myorder"> <input type="submit" class="btn btn-dark" value="My Order"> </a>
+	</div>
+	<div class="col-sm">
+		<a  id="nav"class="nav-link" href="/logout"> <input type="submit" class="btn btn-dark" value="Logout"> </a></h1>
+	</div>
+</div>
+</head>
+<body>
+	<div align="left" style="position: relative; left:100px">
+  <form action="/editprofile" method="POST">
+  <br><label> User Name </label>&nbsp&nbsp &nbsp&nbsp &nbsp&nbsp &nbsp&nbsp<input type="text" name="uname"><br>
+  <br><label> Email ID </label>&nbsp &nbsp&nbsp &nbsp&nbsp &nbsp&nbsp &nbsp&nbsp &nbsp<input type="text" name="email"><br>
+  <br><label> Mobile Number </label> &nbsp&nbsp &nbsp<input type="int" name="mobilenum"><br>
+  <br><label> Password </label> &nbsp&nbsp &nbsp&nbsp &nbsp&nbsp &nbsp&nbsp &nbsp<input type="password" name="pword"><br><br>
+  <input type="submit" name="button" onclick="myFunction()" class="btn btn-dark" value="Edit Profile">
+  <script>
+function myFunction() {
+  alert("Profile Edited");
+}
+</script>
+  </form>
+</html>

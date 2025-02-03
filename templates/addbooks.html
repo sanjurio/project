@@ -1,0 +1,44 @@
+<html>
+<head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <title>AddBooks</title>
+    <div align="left" style="border:1px solid black">
+    <img src="http://www.glosys.co.in/wp-content/uploads/2015/06/22685_1543347712592481_5835115883878899060_n.jpg" width="250" height="80" alt="logo">  &nbsp&nbsp &nbsp&nbsp &nbsp&nbsp &nbsp&nbsp &nbsp&nbsp &nbsp&nbsp<font size="+5"><b> Book Information System </b></font><br><br>
+    
+    <style>
+    body{
+       background-color:#A9A9A9;
+    }
+</style><style>
+        h1{
+            text-align: left;
+        }
+        #nav{
+            margin-right:150px;
+        }
+
+    </style>
+</div>
+</head>
+    <div align="center" style="border:0px solid black">
+<form action="/addbooks" method="POST">
+  <body>
+    <br>
+    <label>ISBN</label>&nbsp&nbsp &nbsp&nbsp &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp <input type="text" name="isbnnum"><br><br>
+    <label>Title</label>&nbsp&nbsp &nbsp&nbsp &nbsp&nbsp&nbsp&nbsp &nbsp&nbsp  <input type="text" name="titlename"><br><br>
+    <label>Author</label>&nbsp&nbsp &nbsp&nbsp &nbsp&nbsp <input type="text" name="authorname"><br><br>
+    <label>Publisher</label>&nbsp&nbsp &nbsp&nbsp <input type="text" name="publishername"><br><br>
+    <label>Year of publishing</label>&nbsp&nbsp &nbsp&nbsp &nbsp&nbsp<input type="date" name="yearpublishing"><br><br>
+    <label>Description</label>&nbsp&nbsp &nbsp&nbsp<input type="text" name="bookdescription"><br><br>
+    <label>Copies available</label>&nbsp<input type="text" name="availcopies"><br><br>
+    <label>Price</label>&nbsp&nbsp &nbsp&nbsp &nbsp&nbsp&nbsp&nbsp &nbsp&nbsp &nbsp&nbsp &nbsp&nbsp<input type="text" name="bookprice"><br><br>
+    <input type="submit" name="button" onclick="myFunction()" class="btn btn-dark" value="Addbook">
+    <script>
+function myFunction() {
+  alert("Book Added");
+}
+</script>
+</form>
+</div>
+</body>
+</html>

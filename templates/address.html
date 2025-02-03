@@ -1,0 +1,42 @@
+<html>
+<head>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	<title>Address</title>
+	<div align="left" style="border:1px solid black">
+	<img src="http://www.glosys.co.in/wp-content/uploads/2015/06/22685_1543347712592481_5835115883878899060_n.jpg" width="250" height="80" alt="logo">  &nbsp&nbsp &nbsp&nbsp &nbsp&nbsp &nbsp&nbsp &nbsp&nbsp &nbsp&nbsp<font size="+5"><b> Book Information System </b></font><br><br>
+	<style>
+		body{
+			 background-color:#A9A9A9;
+		}
+</style>
+	<style>
+		h1{
+			text-align: left;
+		}
+		#nav{
+			margin-right:150px;
+		}
+
+	</style>
+</div>
+</head>
+<body>
+	<div align="center" style="position: relative; left:40px"><br>
+<form action="/address" method="POST">
+  <div class="form-group">
+  	<label>Room NO</label>&nbsp&nbsp &nbsp&nbsp &nbsp&nbsp<input type="text" name="roomno" placeholder="Room Number" value={{request.form.roomno}}><br><br>
+  	<label>Building</label>&nbsp&nbsp &nbsp&nbsp &nbsp&nbsp&nbsp&nbsp<input type="text" name="building" placeholder="Building Name" value={{request.form.building}}><br><br>
+    <label>Street</label>&nbsp&nbsp &nbsp&nbsp &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<input type="text" name="street" placeholder="Street" value={{request.form.street}}><br><br>
+    <label>City</label>&nbsp&nbsp &nbsp&nbsp &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<input type="text" name="city"  placeholder="City" value={{request.form.city}}><br><br>
+    <label>Zipcode</label>&nbsp&nbsp &nbsp&nbsp &nbsp&nbsp<input type="text" name="zipcode"  placeholder="Zipcode" value={{request.form.zipcode}}><br><br>
+  </div>
+  <input type="submit" onclick="myFunction()" class="btn btn-Dark" value="Add Address">
+  <script>
+function myFunction() {
+  alert("Address Added");
+}
+</script>
+</form>
+</div>
+</body>
+</html>

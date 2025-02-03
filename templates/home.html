@@ -1,0 +1,66 @@
+<html>
+<head>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	<title>Home</title>
+	<div align="left" style="border:1px solid black">
+	<img src="http://www.glosys.co.in/wp-content/uploads/2015/06/22685_1543347712592481_5835115883878899060_n.jpg" width="250" height="80" alt="logo">  &nbsp&nbsp &nbsp&nbsp &nbsp&nbsp &nbsp&nbsp &nbsp&nbsp &nbsp&nbsp<font size="+5"><b> Book Information System </b></font>
+	<style>
+		body{
+			 background-color:#A9A9A9;
+		}
+</style>
+	<style>
+		h1{
+			text-align: right;
+		}
+		#nav{
+			margin-right:0px;
+		}
+	</style>
+</div>
+</head>
+	<br><br><br><br>
+<!-- 	<h1>
+	<div class="container">
+  <div class="row">
+    <div class="col-sm">
+	<a id="nav" class="nav-link" href="/sign_up"> <input type="submit" class="btn btn-dark"  value="Sign up"> </a><br><br>
+</div>
+<div class="col-sm">
+	<a id="nav" class="nav-link" href="/user_login"> <input type="submit" class="btn btn-dark" value="User Login"> </a><br><br>
+</div>
+<div class="col-sm">
+	<a class="nav-link" href="/admin_login"> <input type="submit" class="btn btn-dark" value="Admin Login"> </a></h1>
+</div> -->
+<body>
+<div align="left" style="position: relative; left:50px">
+<div class="container">
+  <div class="row">
+    <div class="col-sm">
+  <form action="/user_login" method="POST">
+  <br><br><label>User ID </label> &nbsp&nbsp &nbsp&nbsp &nbsp&nbsp &nbsp<input type="text" name="uid" maxlength="6" required><br>
+  <br><label>Password </label> &nbsp&nbsp &nbsp&nbsp &nbsp<input type="password" name="pword" required><br>
+  <br>
+  <input type="submit" name="button" class="btn btn-dark" value="login">
+</form>
+  <form action="/admin_login" method="POST">
+	<br><label>Admin id</label> &nbsp&nbsp &nbsp&nbsp &nbsp&nbsp<input type="text" name="admin_id" title="Enter valid id" required><br>
+	<br><label>password</label> &nbsp&nbsp &nbsp&nbsp &nbsp&nbsp<input type="password" name="admin_pw" required><br><br>
+	<input type="submit" name="button" class="btn btn-dark" value="Admin">
+</div>
+</form>
+
+<div align="right" style="position: relative; right:250px">
+<div class="col-sm">
+ <form action="/sign_up" method="POST">
+  <br><label> User Name </label>&nbsp&nbsp &nbsp&nbsp &nbsp&nbsp &nbsp&nbsp<input type="text" name="uname" title="Maximum 50 characters" required><br>
+  <br><label> User ID* </label>&nbsp&nbsp &nbsp&nbsp &nbsp&nbsp &nbsp&nbsp &nbsp&nbsp &nbsp<input type="text" name="uid" minlength="6" title="Minimum 6 number required" maxlength="6"  required><br>
+  <br><label> Email ID </label>&nbsp &nbsp&nbsp &nbsp&nbsp &nbsp&nbsp &nbsp&nbsp &nbsp<input type="text" name="emailids" title="Must contain valid Email address" required><br>
+  <br><label> Mobile Number </label> &nbsp&nbsp &nbsp<input type="int" name="mobilenumber" title="Enter valid number" required><br>
+  <br><label> Password* </label> &nbsp&nbsp &nbsp&nbsp &nbsp&nbsp &nbsp&nbsp &nbsp<input type="password" name="pword" pattern="(?=.*\d)(?=.*[a-z]).{8,}" title="Must contain a letter and above 8 characters" required><br><br>
+  <input type="submit" name="button"class="btn btn-dark" value="signup">
+  </form></div>
+</div>
+</div>
+</body>
+</html>

@@ -1,0 +1,41 @@
+<html>
+<head>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	<title>Payment method</title>
+	<div align="left" style="border:1px solid black">
+	<img src="http://www.glosys.co.in/wp-content/uploads/2015/06/22685_1543347712592481_5835115883878899060_n.jpg" width="250" height="80" alt="logo">  &nbsp&nbsp &nbsp&nbsp &nbsp&nbsp &nbsp&nbsp &nbsp&nbsp &nbsp&nbsp<font size="+5"><b> Book Information System </b></font><br><br>
+	<style>
+		body{
+			 background-color:#A9A9A9;
+		}
+</style>
+	<style>
+		h1{
+			text-align: left;
+		}
+		#nav{
+			margin-right:150px;
+		}
+
+	</style>
+</div>
+</head>
+<body>
+	<div align="center" style="position: relative; left:40px"><br>
+<form action="/addcard" method="POST">
+  <div class="form-group">
+  	<label>Card NO</label>&nbsp&nbsp &nbsp&nbsp &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<input type="text" name="ccnum" placeholder="credit/debit" value={{request.form.ccnum}}><br><br>
+  	<label>Card Holder Name</label>&nbsp&nbsp &nbsp&nbsp &nbsp&nbsp<input type="text" name="ccname" placeholder="Name" value={{request.form.ccname}}><br><br>
+    <label>Expiry</label>&nbsp&nbsp &nbsp&nbsp &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<input type="date" name="expirydate" placeholder="Expiry Date" value={{request.form.expirydate}}><br><br>
+    <label>CVV</label>&nbsp&nbsp &nbsp&nbsp &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<input type="text" name="cvvno"  placeholder="cvv" value={{request.form.cvvno}}><br><br>
+    </div>
+  <input type="submit" onclick="myFunction()" class="btn btn-Dark" value="Add Card">
+  <script>
+function myFunction() {
+  alert("Card Added");
+}
+</script>
+</form>
+</div>
+</body>
+</html>

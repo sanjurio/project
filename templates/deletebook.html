@@ -1,0 +1,36 @@
+<html><head>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <title>Editbooks</title>
+    <div align="left" style="border:1px solid black">
+    <img src="http://www.glosys.co.in/wp-content/uploads/2015/06/22685_1543347712592481_5835115883878899060_n.jpg" width="250" height="80" alt="logo">  &nbsp&nbsp &nbsp&nbsp &nbsp&nbsp &nbsp&nbsp &nbsp&nbsp &nbsp&nbsp<font size="+5"><b> Book Information System </b></font><br><br>
+    <style>
+    body{
+       background-color:#A9A9A9;
+    }
+</style>
+    <style>
+        h1{
+            text-align: left;
+        }
+        #nav{
+            margin-right:150px;
+        }
+
+    </style>
+</div>
+</head>
+<body>
+	<div align="center" style="border:0px solid black">
+<form action="/deletebook" method="POST">
+	<br><br><br>
+     <label>Book ID</label> &nbsp&nbsp &nbsp&nbsp &nbsp&nbsp<input type="text" name="bookids" ><br><br>
+  <input type="submit" onclick="myFunction()" name="button" class="btn btn-dark" value="Delete Book">
+  <script>
+function myFunction() {
+  alert("Book Deleted");
+}
+</script>
+</form>
+</div>
+</body>
+</html>

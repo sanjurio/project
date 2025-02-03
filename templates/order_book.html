@@ -1,0 +1,55 @@
+<html>  
+<head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <title>Placeorder</title>
+    <div align="left" style="border:1px solid black">
+    <img src="http://www.glosys.co.in/wp-content/uploads/2015/06/22685_1543347712592481_5835115883878899060_n.jpg" width="250" height="80" alt="logo">  &nbsp&nbsp &nbsp&nbsp &nbsp&nbsp &nbsp&nbsp &nbsp&nbsp &nbsp&nbsp<font size="+5"><b> Book Information System </b></font><br><br>
+    <style>
+        body{
+             background-color:#A9A9A9;
+        }
+</style>
+    <style>
+        h1{
+            text-align: left;
+        }
+        #nav{
+            margin-right:150px;
+        }
+
+    </style>
+</div>
+</head>
+    <h1> Place Order </h1>
+            <!-- <h5><a class="card-title" id="" href=""> {{ book_data[1] }}</a></h5>
+            <h4>{{ book_data[2] }}</h4>
+            <span>{{ book_data[8] }}</span>
+ -->
+<form action="placeorder" method="POST">
+  <div class="nav-link">
+  <div class="form-group">
+    <div align="left" style="position: relative; left:50px">
+    <input type="hidden" name="bookid1" value={{ book_data[0] }}>
+    <input type="hidden" name="isbnnum" value={{ book_data[1] }}>
+    <input type="hidden" name="total" value={{ book_data[8] }}>
+    <label>Room no</label><br><input type="text" name="roomno"  value={{ addr_data[2] }} ><br><br>
+    <label>building</label><br><input type="text" name="building"  value={{ addr_data[3] }} ><br><br>
+    <label>street</label><br><input type="text" name="street"  value={{ addr_data[4] }} ><br><br>
+    <label>city</label><br><input type="text" name="city"  value={{ addr_data[5] }} ><br><br>
+    <label>zipcode</label><br><input type="text" name="zipcode"  value={{ addr_data[6] }} ><br><br>
+    <label>Mobilenumber</label><br><input type="text" name="phoneno"  value={{ cust_data[4] }} readonly=""><br><br>
+    <label>Email</label><br><input type="text" name="emailids"  value={{ cust_data[3] }} readonly=""><br><br>
+<input type="hidden" name="book_id"  value={{ book_data[1] }} >
+<input type="hidden" name="title"  value={{ book_data[2] }} >
+<input type="hidden" name="user_id"  value={{ cust_data[0] }} >
+ <input type="hidden" name="book_price"  value={{ book_data[8] }}>
+  <input type="submit" onclick="myFunction()" class="btn btn-dark" value="Place Order">
+  <script>
+function myFunction() {
+  alert("Product Ordered");
+}
+</script>
+</form>
+</div>
+</div>
+</html>

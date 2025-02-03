@@ -1,0 +1,66 @@
+<html>
+<head>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	<title>My Cart</title>
+	<div align="left" style="border:1px solid black">
+	<img src="http://www.glosys.co.in/wp-content/uploads/2015/06/22685_1543347712592481_5835115883878899060_n.jpg" width="250" height="80" alt="logo">  &nbsp&nbsp &nbsp&nbsp &nbsp&nbsp &nbsp&nbsp &nbsp&nbsp &nbsp&nbsp<font size="+5"><b> Book Information System </b></font><br><br>
+	<style>
+		body{
+			 background-color:#A9A9A9;
+		}
+</style>
+	<style>
+		h1{
+			text-align: left;
+		}
+		#nav{
+			margin-right:150px;
+		}
+
+	</style>
+	<h1>
+		My Cart <br><br>
+	<div class="container">
+  <div class="row">
+    <div class="col-sm">
+    	<a id="nav" class="nav-link" href="/loginhome"> <input type="submit" class="btn btn-dark"  value="Home"> </a>
+	</div>
+	<div class="col-sm">
+    	<a id="nav" class="nav-link" href="/editprofile"> <input type="submit" class="btn btn-dark"  value="Edit Profile"> </a>
+	</div>
+	<div class="col-sm">
+   	<a id="nav" class="nav-link" href="/myorder"> <input type="submit" class="btn btn-dark" value="My Order"> </a>
+</div>
+	<div class="col-sm">
+	<a class="nav-link" href="/logout"> <input type="submit" class="btn btn-dark" value="Logout"> </a></h1>
+</div>
+</head>
+<body>
+<div align="left" style="position: relative; left:40px">
+<br>
+<div class="row">
+	{% for book in data %}
+	<div class="card">
+  <div class="card-header"><div class="w3-panel w3-border">
+   <p style="background-color:DarkGray;" class="card-text"> {{ book[2] }} </p>  </div>
+  <div class="card-body"style="width: 25rem;">
+    Author<p style="background-color:AliceBlue ;" class="card-text">{{ book[3] }}</p>
+    Date of Publishing<p style="background-color:AliceBlue ;"class="card-text">{{ book[5] }}</p>
+    Description<p style="background-color:AliceBlue ;"class="card-text">{{ book[6] }}</p>
+    Copies Available<p style="background-color:AliceBlue ;"class="card-text">{{ book[7] }}</p>
+    Price<p style="background-color:AliceBlue ;"class="card-text">{{ book[8] }}</p>
+    <a id="nav" class="nav-link" href="/cartremove">  <input type="submit" class="btn btn-dark" value="Remove book"> </a>
+</div>
+</div>
+</div>
+	
+	{% endfor %}
+</div>
+</div><br><br>
+	<div align="left" style="position: relative; left:650px">
+	<form action="/order_book" method="POST">
+	<a class="nav-link" href="/order_book">  <input type="submit" class="btn btn-dark" value="Place Order"> </a>
+	</form>
+</div>
+</body>
+</html>

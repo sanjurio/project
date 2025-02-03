@@ -1,0 +1,66 @@
+<html>
+<head>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	<title>LoginHome</title>
+	<div align="left" style="border:1px solid black">
+	<img src="http://www.glosys.co.in/wp-content/uploads/2015/06/22685_1543347712592481_5835115883878899060_n.jpg" width="250" height="80" alt="logo">  &nbsp&nbsp &nbsp&nbsp &nbsp&nbsp &nbsp&nbsp &nbsp&nbsp &nbsp&nbsp<font size="+5"><b> Book Information System </b></font><br><br>
+	<style>
+		body{
+			 background-color:#A9A9A9;
+		}
+</style>
+	<style>
+		h1{
+			text-align: left;
+		}
+		#nav{
+			margin-right:150px;
+		}
+
+	</style>
+	<h1>
+	Welcome Admin
+	</h1>
+</div>
+</head>
+<body>
+	{% for book in data %}
+
+<div class="card">
+  <div class="card-header"><div class="w3-panel w3-border">
+   <p style="background-color:DarkGray;" class="card-text"> {{ book[2] }}
+  </div>
+  <div class="card-body"style="width: 25rem;">
+  	Book ID <p style="background-color:AliceBlue ;" class="card-text">{{ book[0] }}</p>
+  	ISBN <p style="background-color:AliceBlue ;" class="card-text">{{ book[1] }}</p>
+    Author<p style="background-color:AliceBlue ;" class="card-text">{{ book[3] }}</p>
+    Date of Publishing<p style="background-color:AliceBlue ;"class="card-text">{{ book[5] }}</p>
+    Description<p style="background-color:AliceBlue ;"class="card-text">{{ book[6] }}</p>
+    Copies Available<p style="background-color:AliceBlue ;"class="card-text">{{ book[7] }}</p>
+    Price<p style="background-color:AliceBlue ;"class="card-text">{{ book[8] }}</p>
+    <p style="background-color:AliceBlue ;"class="card-text">{{ book[9] }}</p>
+    <!-- Enter Book ID to Delete<input type="text" name="bookids" value={{ book[0] }} style="background-color:AliceBlue ;"class="card-text">
+    <form action="/deletebook" method="POST">
+     <input type="submit" name="button" class="btn btn-dark" value="Delete Book"> -->
+    <!-- <form action="/add_cart" method="POST">
+    <input type="text" name="bookid1" value={{ book[0] }} style="display:none">
+	<input type="text" name="isbnnum" value={{ book[1] }} style="display:none">
+	<p class="nav-link"><input type="submit" class="btn btn-primary" value="ADD TO CART"></p>
+	</form>
+	<form action="/order_book" method="POST">
+	<input type="text" name="bookid1" value={{ book[0] }} style="display:none">
+	<input type="text" name="isbnnum" value={{ book[1] }} style="display:none">
+	<input type="text" name="total" value={{ book[8] }} style="display:none">
+	<a class="nav-link"><input type="submit" class="btn btn-primary" value="ORDER"> </a>
+	</form> -->
+  </div>
+</div>
+</div>
+<br>
+{% endfor %}
+</p>
+</div>
+</div>
+</div>
+</body>
+</html>

@@ -1,0 +1,18 @@
+
+<dataConfig>
+    <dataSource type="JdbcDataSource"
+    driver="com.ddtek.jdbc.sqlserver.SQLServerDriver"
+    url="jdbc:datadirect:http://localhost/phpmyadmin/db_structure.php?server=1;DatabaseName=samp"
+    user="root"
+    password=""/>
+    <document>
+    <entity name="books" pk="Book_id" query="select * from books">
+    <field column="Book_id" name="Book_id"/>
+    <field column="ISBN" name="ISBN"/>
+    <field column="Title" name="Title"/>
+    <field column="Author" name="Author"/>
+    <field column="Publisher" name="Publisher"/>
+    <field column="Description" name="Description"/>
+    </entity>
+    </document>
+    </dataConfig>
